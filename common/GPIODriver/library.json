@@ -1,0 +1,7 @@
+{
+  "name": "GPIODriver",
+  "version": "1.0.0",
+  "description": "Register-level ESP32 GPIO driver (bypasses digitalWrite/pinMode)",
+  "frameworks": "arduino",
+  "platforms": "espressif32"
+}
