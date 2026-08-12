@@ -13,6 +13,16 @@ void GPIODriver::init()
     *GPIO_ENABLE_REGISTER = *GPIO_ENABLE_REGISTER | mask;
 }
 
+void GPIODriver::initInput()
+{
+    pinMode(pin, INPUT);
+};
+
+bool GPIODriver::read()
+{
+    return (*GPIO_IN_REGISTER >> pin) & 1;
+}
+
 void GPIODriver::setHigh()
 {
     *GPIO_OUT_REGISTER |= this->mask;
